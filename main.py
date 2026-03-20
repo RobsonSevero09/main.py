@@ -9,6 +9,18 @@ import googlemaps
 import requests
 
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return """
+    <html>
+        <head><title>Flex Sol Patos</title></head>
+        <body style="font-family: sans-serif; text-align: center; padding: 50px;">
+            <h1>☀️ Flex Sol - Sistema Inteligente</h1>
+            <p>O motor do sistema está rodando perfeitamente em Patos-PB!</p>
+            <p>Para fazer sua simulação, envie sua conta pelo nosso WhatsApp oficial.</p>
+        </body>
+    </html>
+    """
 
 # ==============================================================================
 # 🔐 1. SEGURANÇA E CONFIGURAÇÕES (Variáveis de Ambiente)
