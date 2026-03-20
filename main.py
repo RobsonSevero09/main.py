@@ -11,13 +11,36 @@ import requests
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return """
+    # Substitua pelo SEU número de WhatsApp (mantenha o 55 e o DDD)
+    whatsapp_link = "https://wa.me/5583988929682?text=Olá,%20vi%20o%20link%20no%20Instagram%20e%20quero%20fazer%20minha%20simulação%20solar."
+    
+    return f"""
     <html>
-        <head><title>Flex Sol Patos</title></head>
-        <body style="font-family: sans-serif; text-align: center; padding: 50px;">
-            <h1>☀️ Flex Sol - Sistema Inteligente</h1>
-            <p>O motor do sistema está rodando perfeitamente em Patos-PB!</p>
-            <p>Para fazer sua simulação, envie sua conta pelo nosso WhatsApp oficial.</p>
+        <head>
+            <title>Flex Sol Patos</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 40px; background-color: #f4f7f6; color: #333; }}
+                .container {{ background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }}
+                h1 {{ color: #f39c12; margin-bottom: 10px; }}
+                p {{ line-height: 1.6; font-size: 1.1em; }}
+                .btn {{ 
+                    display: inline-block; background-color: #25d366; color: white; padding: 15px 30px; 
+                    text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em;
+                    margin-top: 20px; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+                }}
+                .btn:hover {{ transform: scale(1.05); background-color: #128c7e; }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>☀️ Flex Sol</h1>
+                <h3>Sistema Inteligente de Energia</h3>
+                <p>O motor do sistema está operando 100% em <strong>Patos-PB</strong>.</p>
+                <p>Pronto para transformar o calor do Sertão em economia no seu bolso?</p>
+                <a href="{whatsapp_link}" class="btn">🚀 INICIAR SIMULAÇÃO</a>
+                <p style="font-size: 0.8em; margin-top: 20px; color: #888;">Clique no botão para enviar sua conta pelo WhatsApp oficial.</p>
+            </div>
         </body>
     </html>
     """
