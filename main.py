@@ -25,10 +25,10 @@ def home():
 # ==============================================================================
 # 🔐 1. SEGURANÇA E CONFIGURAÇÕES (Variáveis de Ambiente)
 # ==============================================================================
-# Configure estas chaves no painel da Railway (Variables)
+# Adaptando o código para os nomes que a Railway está forçando
 GENAI_API_KEY = os.environ.get("GENAI_API_KEY")
-GMAPS_API_KEY = os.environ.get("GMAPS_API_KEY")
-WEATHER_API_KEY = os.environ.get("WEATHER_API_KEY")
+GMAPS_API_KEY = os.environ.get("CHAVE_API_GMAPS")
+WEATHER_API_KEY = os.environ.get("CHAVE_API_METEOROLOGIA")
 
 genai.configure(api_key=GENAI_API_KEY)
 gmaps = googlemaps.Client(key=GMAPS_API_KEY)
