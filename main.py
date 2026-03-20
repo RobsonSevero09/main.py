@@ -194,6 +194,6 @@ def processar_venda():
     })
 
 if __name__ == '__main__':
-    # Configuração para rodar na Railway
-    port = int(os.environ.get("PORT", 5000))
+    # A Railway exige que o host seja 0.0.0.0 e a porta venha da variável de ambiente PORT
+    port = int(os.environ.get("PORT", 8080))
     app.run(host='0.0.0.0', port=port)
